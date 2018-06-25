@@ -1,69 +1,145 @@
-AppChallenge 3 User register
-This app allow users to 
--Insert user information
+CREATE DATABASE employee;
 
--Allow the admin to see all user information
+USE employee;
 
-Extra
--See user information
--Allow Admin to print one user information
--Allow Admin to print all the users information
+CREATE TABLE employees(
+				id_employee INT AUTO_INCREMENT,
 
-Candidates
-				id_candidate 
-				id_document
-				full_name
-				date_birth
-				gender
-				birth_place
-				id_number
-				address
-				phone1
-				phone2
-				email
-				career
-				hours_available
-				experience
-				spanish_language
-				english_language 
-				created_date
+				first_name VARCHAR(50),
+				middle_name VARCHAR(50),
+				last_name VARCHAR(50),
+				id_number VARCHAR(50),
+				email VARCHAR(50),
+				current_address VARCHAR(80),
+				date_birth DATE,
+				birth_place VARCHAR(80),
+				cellphone VARCHAR(20),
+				telephone VARCHAR(20),
+				gender VARCHAR(10),
+				civil_status VARCHAR(20),
+				nationality VARCHAR(20),
 
-Document
-				id_document
-				document_name
-				path_storage
-				uploaded_date
+				created_by_user VARCHAR(20),
+				updated_by_user VARCHAR(20),
+				created_date DATETIME,
+				updated_date DATETIME,
 
-
-create database resumes;
-
-use resumes;
-
-create table candidates(
-				id_candidate int auto_increment,
-				id_document int not null,
-				full_name varchar(50),
-				date_birth date,
-				gender varchar(10),
-				birth_place varchar(50),
-				id_number varchar(50),
-				address varchar(50),
-				phone1 varchar(20),
-				phone2 varchar(20),
-				email varchar(30),
-				career varchar(20),
-				hours_available int(20),
-				experience varchar(5),
-				spanish_language varchar(10),
-				english_language varchar(10),
-				created_date datetime,
-				primary key(id_candidate)
+				PRIMARY KEY(id_employee)
 					);
 
-create table documents(
-				id_document int auto_increment,
-				document_name varchar(100),
-				path_storage varchar(100),
-				uploaded_date datetime,
-				primary key(id_document)
+CREATE TABLE  profiles(
+				id_profile INT AUTO_INCREMENT,
+
+				id_user INT NOT NULL,
+				id_employee INT NOT NULL,
+				id_department INT NOT NULL,
+				id_image INT NOT NULL,
+
+				work_phone VARCHAR(20),
+				work_email VARCHAR(50),
+				hours_per_week INT (50),
+				date_hired DATETIME,
+				status VARCHAR (20),
+				notes  VARCHAR (500),
+
+				created_by_user VARCHAR(20),
+				updated_by_user VARCHAR(20),
+				created_date DATETIME,
+				updated_date DATETIME,
+
+				PRIMARY KEY(id_profile)
+					);
+
+CREATE TABLE  users(
+				id_user INT AUTO_INCREMENT,
+				id_employee INT NOT NULL,
+				
+				user_name VARCHAR(50),
+				password TEXT(50),
+
+				created_by_user VARCHAR(20),
+				updated_by_user VARCHAR(20),
+				created_date DATETIME,
+				updated_date DATETIME,
+
+				PRIMARY KEY(id_user)
+					);
+
+CREATE TABLE departments (
+				id_department INT AUTO_INCREMENT,
+				id_user INT NOT NULL,
+				id_employee INT NOT NULL,
+
+				name_department VARCHAR(150),
+
+				created_by_user VARCHAR(20),
+				updated_by_user VARCHAR(20),
+				created_date DATETIME,
+				updated_date DATETIME,
+
+				PRIMARY KEY(id_department)
+						);
+
+CREATE TABLE   images(
+				id_image INT AUTO_INCREMENT,
+				id_employee INT NOT NULL,
+
+				image_name VARCHAR(500),
+				path VARCHAR(500),
+
+				created_by_user VARCHAR(20),
+				updated_by_user VARCHAR(20),
+				created_date DATETIME,
+				updated_date DATETIME,
+
+				PRIMARY KEY(id_image)
+					);
+CREATE TABLE   salaries(
+				id_salary INT (11),
+				id_user INT NOT NULL,
+				id_employee INT NOT NULL,
+
+
+				salary INT (11),
+
+				created_by_user VARCHAR(20),
+				updated_by_user VARCHAR(20),
+				created_date DATETIME,
+				updated_date DATETIME,
+
+				PRIMARY KEY(id_emp)
+					);
+
+CREATE TABLE   documents(
+				id_document INT AUTO_INCREMENT,
+				id_employee INT NOT NULL,
+
+				document_name VARCHAR(500),
+				path VARCHAR(500),
+
+				created_by_user VARCHAR(20),
+				updated_by_user VARCHAR(20),
+				created_date DATETIME,
+				updated_date DATETIME,
+
+				PRIMARY KEY(id_document)
+					);
+
+CREATE TABLE   messages(
+				id_message INT (11),
+				id_user INT NOT NULL,
+				id_employee INT NOT NULL,
+
+				subject VARCHAR(50),
+				message VARCHAR(1000),
+
+				created_by_user VARCHAR(20),
+				created_date DATETIME,
+
+				PRIMARY KEY(id_message)
+					);
+
+CREATE TABLE   stats(
+				id_stat INT (11),
+				PRIMARY KEY(id_stat )
 					);
