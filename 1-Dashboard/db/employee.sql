@@ -55,7 +55,8 @@ CREATE TABLE  users(
 				id_employee INT NOT NULL,
 				
 				user_name VARCHAR(50),
-				password TEXT(50),
+				password VARCHAR(250),
+				user_role VARCHAR(50),
 
 				created_by_user VARCHAR(20),
 				updated_by_user VARCHAR(20),
