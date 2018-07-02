@@ -1,4 +1,7 @@
 Tonight To Do: 
+
+https://www.google.com.do/search?q=sumer+documentary&source=lnms&tbm=vid&sa=X&ved=0ahUKEwjJpM6tsoHcAhWxtlkKHVPsBCQQ_AUICigB&biw=1440&bih=769
+
 -Start Coding The Dashboard
 -Query the Inventory's users data
 -Create the Administration database
@@ -19,3 +22,5 @@ In the morning
 -Study JSON 
 
 https://codecanyon.net/item/user-login-register-and-user-management/9617985?s
+
+
