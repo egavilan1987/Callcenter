@@ -1,10 +1,21 @@
-TODO LIST
+Tonight To Do: 
+-Start Coding The Dashboard
+-Query the Inventory's users data
+-Create the Administration database
 
--Study the users on the previous apps
--Study new dashboards
+-Install CCleaner
+-Unisntall unecesaries software from the my computer
 
+-Amazon Claim
+-Make the final loan thinking
+-English Pronunciation
+ *First session of speak english like americans
+ *Study the A sound
+ *Make some exirceses
 
--Finish the user table
--Start boostrap
+In the morning
+-Code the Dashboard
+-Study English
+-Study JSON 
 
 https://codecanyon.net/item/user-login-register-and-user-management/9617985?s
