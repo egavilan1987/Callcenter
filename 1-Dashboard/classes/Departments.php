@@ -1,28 +1,29 @@
 <?php 
-	class categories{
-		public function addCategory($data){
+
+	class departments{
+
+		public function addDepartment($data){
 			$c=new Connect();
 			$connection=$c->connection();
-			$sql="INSERT INTO sl_categories(id_user,
-										name_category,
-										date_capture)
+
+			$sql="INSERT INTO departments(id_user,
+							name_department,
+							created_date)
 						VALUES ('$data[0]',
-								'$data[1]',
-								'$data[2]')";
+							'$data[1]',
+							'$data[2]')";
+
 			return mysqli_query($connection,$sql);
 		}
-		public function updateCategory($data){
+
+		public function updateDepartment($data){
 			$c=new Connect();
 			$connection=$c->connection();
-			$sql="UPDATE sl_categories SET name_category='$data[1]'
+
+			$sql="UPDATE departments SET name_category='$data[1]'
 								WHERE id_category='$data[0]'";
 			return mysqli_query($connection,$sql);
 		}
-		public function deleteCategory($idcategory){
-			$c=new Connect();
-			$connection=$c->connection();
-			$sql="DELETE FROM sl_categories WHERE id_category='$idcategory'";
-			return mysqli_query($connection,$sql);
-		}
 	}
+
  ?>
