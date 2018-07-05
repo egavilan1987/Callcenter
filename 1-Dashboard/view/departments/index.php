@@ -24,7 +24,7 @@
  </head>
  <body>
   <div class="container">
-   <h1 align="center">Candidates Data</h1>
+   <h1 align="center">Departments</h1>
    <br />
    
    <div class="table-responsive">
@@ -32,13 +32,11 @@
      <thead>
       <tr>
        <th>ID</th>
-       <th>Full Name</th>
-       <th>Career</th>
-       <th>Experience</th>
-       <th>Spanish</th>
-       <th>English</th>
-       <th>Doc</th>
-       <th>PDF</th>
+       <th>Departments</th>
+       <th>Created By</th>
+       <th>Date Created</th>
+       <th>Updated By</th>
+       <th>Date Updated</th>
        <th>Show</th>
        <th>Update</th>
        <th>Delete</th>
