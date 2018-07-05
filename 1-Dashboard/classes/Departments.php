@@ -20,7 +20,7 @@
 			$c=new Connect();
 			$connection=$c->connection();
 
-			$sql="UPDATE departments SET name_department='$data[1]'
+			$sql="UPDATE departments SET name_department='$data[1]', updated_date='$data[2]'
 								WHERE id_department='$data[0]'";
 			return mysqli_query($connection,$sql);
 		}
