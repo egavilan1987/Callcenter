@@ -55,26 +55,26 @@
 
 	<script type="text/javascript">
 		$(document).ready(function(){
-			$('#loadCategoriesTable').load("Categories/categoriesTable.php");
-			$('#btnAddCategories').click(function(){
-				Empties=validateEmptyForm('frmCategories');
+			$('#loadDepartmentsTable').load("Departments/departmentsTable.php");
+			$('#btnAddDepartments').click(function(){
+				Empties=validateEmptyForm('frmDepartments');
 				if(Empties > 0){
 					alertify.alert("You must fill all of the fields!");
 					return false;
 				}
-				data=$('#frmCategories').serialize();
+				data=$('#frmDepartments').serialize();
 				$.ajax({
 					type:"POST",
 					data:data,
-					url:"../process/categories/AddCategories.php",
+					url:"../process/departments/AddCategories.php",
 					success:function(r){
 						if(r==1){
 						//clear the form
-						$('#frmCategories')[0].reset();
-						$('#loadDepartmentsTable').load("Categories/categoriesTable.php");
-						alertify.success("Categories successfuly added.");
+						$('#frmDepartments')[0].reset();
+						$('#loadDepartmentsTable').load("Departments/departmentsTable.php");
+						alertify.success("Department successfuly added.");
 					}else{
-						alertify.error("Could not add Category.");
+						alertify.error("Could not add Department.");
 					}
 				}
 			});
