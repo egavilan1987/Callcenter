@@ -1,15 +1,15 @@
 <?php 
 	session_start();
 	require_once "../../classes/connection.php";
-	require_once "../../classes/Categories.php";
+	require_once "../../classes/Departments.php";
 	$currentDate=date("Y-m-d");
-	$iduser=$_SESSION['iduser'];
-	$category=$_POST['category'];
+	$iduser="admin";
+	$department=$_POST['department'];
 	$data=array(
 		$iduser,
-		$category,
+		$department,
 		$currentDate
 				);
-	$obj= new categories();
-	echo $obj->addCategory($data);
+	$obj= new departments();
+	echo $obj->addDepartment($data);
  ?>
