@@ -1,6 +1,6 @@
-CREATE DATABASE employee;
+CREATE DATABASE administrator;
 
-USE employee;
+USE administrator;
 
 CREATE TABLE employees(
 				id_employee INT AUTO_INCREMENT,

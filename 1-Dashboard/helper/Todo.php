@@ -1,26 +1,28 @@
 Tonight To Do: 
 
-https://www.google.com.do/search?q=sumer+documentary&source=lnms&tbm=vid&sa=X&ved=0ahUKEwjJpM6tsoHcAhWxtlkKHVPsBCQQ_AUICigB&biw=1440&bih=769
 
--Start Coding The Dashboard
--Query the Inventory's users data
--Create the Administration database
+-Start Coding The Dashboard(done)
+-Query the Inventory's users data(Next)
+-Create the Administration database(done)
 
 -Install CCleaner
 -Unisntall unecesaries software from the my computer
 
 -Amazon Claim
 -Make the final loan thinking
--English Pronunciation
- *First session of speak english like americans
- *Study the A sound
- *Make some exirceses
+-English Pronunciation(Done)
+ *First session of speak english like americans(done)
+ *Study the A sound(done)
+ 
 
 In the morning
 -Code the Dashboard
 -Study English
 -Study JSON 
 
-https://codecanyon.net/item/user-login-register-and-user-management/9617985?s
+
+Tomorrow Todo: 
+-Research about adding setting to the dashboard
+-Review the dashboard
 
 
