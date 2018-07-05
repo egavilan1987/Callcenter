@@ -49,21 +49,19 @@
           {
             echo '
               <tr>
-                <td>'.$row["id_candidate"].'</td>
-                <td>'.$row["full_name"].'</td>
-                <td>'.$row["career"].'</td>
-                <td>'.$row["experience"].'</td>
-                <td>'.$row["spanish_language"].'</td>
-                <td>'.$row["english_language"].'</td>
-                <td><a class="btn btn btn-primary" href="print_invoice.php?pdf=1&id='.$row["id_candidate"].'">Doc</a></td>
-                <td><a class="btn btn btn-info" href="print_invoice.php?pdf=1&id='.$row["id_candidate"].'">PDF</a></td>
-                <td><a class="btn btn btn-success" href="invoice.php?update=1&id='.$row["id_candidate"].'"><span class="glyphicon glyphicon-eye-open"></span></a></td>
+                <td>'.$row["id_department"].'</td>
+                <td>'.$row["name_department"].'</td>
+                <td>'.$row["created_by_user"].'</td>
+                <td>'.$row["updated_by_user"].'</td>
+                <td>'.$row["created_date"].'</td>
+                <td>'.$row["updated_date"].'</td>
+                <td><a class="btn btn btn-success" href="invoice.php?update=1&id='.$row["id_department"].'"><span class="glyphicon glyphicon-eye-open"></span></a></td>
 
 
-                <td><a class="btn btn btn-warning" data-toggle="modal" data-target="#updateCandidateModal" onclick="addCandidate('.$row["id_candidate"].')"><span class="glyphicon glyphicon-edit"></span></a></td>
+                <td><a class="btn btn btn-warning" data-toggle="modal" data-target="#updateDepartmentModal" onclick="addCandidate('.$row["id_department"].')"><span class="glyphicon glyphicon-edit"></span></a></td>
 
 
-                <td><a class="btn btn btn-danger" class="delete"><span class="glyphicon glyphicon-remove" onclick="deleteCandidate('.$row["id_candidate"].')"></span></a></td>
+                <td><a class="btn btn btn-danger" class="delete"><span class="glyphicon glyphicon-remove" onclick="deleteCandidate('.$row["id_department"].')"></span></a></td>
               </tr>
             ';
           }
@@ -73,10 +71,10 @@
    </div>
   </div>
 
-    <div id="loadUsersTable"></div>
+    <div id="loadDepartmentsTable"></div>
 
     <!-- Modal -->
-    <div class="modal fade" id="updateCandidateModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+    <div class="modal fade" id="updateDepartmentModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
       <div class="modal-dialog" role="document">
         <div class="modal-content">
           <div class="modal-header">
@@ -231,7 +229,7 @@
     </div>
           </div>
           <div class="modal-footer">
-            <button id="updateCandidateBtn" type="button" class="btn btn-warning" data-dismiss="modal">Save changes</button>
+            <button id="updateDepartmentBtn" type="button" class="btn btn-warning" data-dismiss="modal">Save changes</button>
 
           </div>
         </div>
@@ -251,7 +249,7 @@ $(document).ready(function(){
   var dataTable = $('#resumesData').DataTable({
     "columnDefs":[
     {
-     "targets":[6,7,8,9,10],
+     "targets":[6,7],
      "orderable":false,
     },
    ],
@@ -261,12 +259,12 @@ $(document).ready(function(){
 
   <script type="text/javascript">
     $(document).ready(function(){
-      $('#updateCandidateBtn').click(function(){
-        data=$('#frmUpdateCandidate').serialize();
+      $('#updateDepartmentBtn').click(function(){
+        data=$('#frmUpdateDepartment').serialize();
         $.ajax({
           type:"POST",
           data:data,
-          url:"../process/candidates/updateCandidate.php",
+          url:"../process/departments/updateDepartments.php",
           success:function(r){
             alert (r);
           }
