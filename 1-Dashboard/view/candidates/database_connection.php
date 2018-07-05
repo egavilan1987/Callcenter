@@ -1,4 +1,4 @@
 <?php
 //database_connection.php
-$connect = new PDO('mysql:host=localhost;dbname=resumes', 'root', '');
+$connect = new PDO('mysql:host=localhost;dbname=administrator', 'root', '');
 ?>
