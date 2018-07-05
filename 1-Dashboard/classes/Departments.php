@@ -20,8 +20,8 @@
 			$c=new Connect();
 			$connection=$c->connection();
 
-			$sql="UPDATE departments SET name_category='$data[1]'
-								WHERE id_category='$data[0]'";
+			$sql="UPDATE departments SET name_department='$data[1]'
+								WHERE id_department='$data[0]'";
 			return mysqli_query($connection,$sql);
 		}
 	}
