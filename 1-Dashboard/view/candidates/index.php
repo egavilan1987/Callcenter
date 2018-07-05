@@ -2,7 +2,7 @@
   //invoice.php  
   include('database_connection.php');
 
-  $statement = $connect->prepare("SELECT * FROM candidates ORDER BY id_candidate ASC");
+  $statement = $connect->prepare("SELECT * FROM departments ORDER BY id_department ASC");
 
   $statement->execute();
 
