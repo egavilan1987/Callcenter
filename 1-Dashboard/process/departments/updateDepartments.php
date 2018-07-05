@@ -4,12 +4,12 @@
 	require_once "../../classes/Departments.php";
 
 	$currentDate=date("Y-m-d");
-	$iduser="admin";
-	$department=$_POST['department'];
+	$user="admin";
 
 	$data=array(
-		$iduser,
-		$department,
+		$user,
+		$_POST['idDepartment'],
+		$_POST['departmentUpdate'],
 		$currentDate
 				);
 
