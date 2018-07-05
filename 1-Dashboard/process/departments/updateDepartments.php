@@ -7,9 +7,9 @@
 	$user="admin";
 
 	$data=array(
-		$user,
 		$_POST['idDepartment'],
 		$_POST['departmentUpdate'],
+		$user,
 		$currentDate
 				);
 
