@@ -20,16 +20,20 @@
 			return mysqli_query($connection,$sql);
 		}
 		public function loginUser($inform){
+			
 			$c=new Connect();
 			$connection=$c->connection();
+			
 			$password=sha1($inform[1]);
 			$_SESSION['user']=$inform[0];
 			$_SESSION['iduser']=self::bringID($inform);
+			
 			$sql="SELECT * 
-					from sl_users 
-				where email='$inform[0]'
-				and password='$password'";
+					FROM users 
+				WHERE user_name='$inform[0]'
+				AND password='$password'";
 			$result=mysqli_query($connection,$sql);
+			
 			if(mysqli_num_rows($result) > 0){
 				return 1;
 			}else{
@@ -48,12 +52,18 @@
 			return mysqli_fetch_row($result)[0];
 		}
 		public function getUserData($idUser){
+			
 			$c=new Connect();
 			$connection=$c->connection();
+			
 			$sql="SELECT id_user,
-					name,
-					last_name,
-					email
+					user_name,
+					password,
+					user_role,
+					created_by_user,
+					updated_by_user,
+					created_date,
+					updated_date
 					FROM sl_users 
 					WHERE id_user='$idUser'";
 					
