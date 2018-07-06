@@ -2,6 +2,13 @@ To Do:
 
 -Start Coding The Dashboard
 --Users
+--Study the dashboard code
+
+-Study the the loan
+-Pay CC
+-Magazine review after lunch
+
+
 
 
 In the morning

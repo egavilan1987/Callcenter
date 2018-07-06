@@ -66,7 +66,7 @@
 				$.ajax({
 					type:"POST",
 					data:data,
-					url:"../process/departments/AddCategories.php",
+					url:"../process/departments/addDepartments.php",
 					success:function(r){
 						if(r==1){
 						//clear the form
@@ -81,6 +81,7 @@
 			});
 		});
 	</script>
+
 	<script type="text/javascript">
 		$(document).ready(function(){
 			$('#btnUpdateCategory').click(function(){
@@ -100,29 +101,4 @@
 				});
 			});
 		});
-	</script>
-	<script type="text/javascript">
-		function addData(idCategory,category){
-			$('#idCategory').val(idCategory);
-			$('#categoryUpdate').val(category);
-		}
-		function deleteCategory(idcategory){
-			alertify.confirm('Do you want to delete the category?', function(){ 
-				$.ajax({
-					type:"POST",
-					data:"idcategory=" + idcategory,
-					url:"../process/categories/deleteCategory.php",
-					success:function(r){
-						if(r==1){
-							$('#loadCategoriesTable').load("categories/categoriesTable.php");
-							alertify.success("Category successfuly deleted!");
-						}else{
-							alertify.error("Category could not be deleted");
-						}
-					}
-				});
-			}, function(){ 
-				alertify.error('Canceled!')
-			});
-		}
 	</script>
