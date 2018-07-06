@@ -3,16 +3,19 @@
 		public function userRegister($data){
 			$c=new Connect();
 			$connection=$c->connection();
+			
 			$date=date('Y-m-d');
-			$sql="INSERT INTO sl_users (name,
-							last_name,
-							email,
+			$user="admin";
+			
+			$sql="INSERT INTO sl_users (user_name,
 							password,
-							date_capture)
+							user_role,
+							created_by_user,
+							created_date)
 						VALUES ('$data[0]',
 							'$data[1]',
 							'$data[2]',
-							'$data[3]',
+							'$user',
 							'$date')";
 			return mysqli_query($connection,$sql);
 		}
@@ -71,20 +74,10 @@
 			$c=new Connect();
 			$connection=$c->connection();
 			
-			$sql="UPDATE sl_users SET name='$data[1]',
-							last_name='$data[2]',
-							email='$data[3]'
+			$sql="UPDATE users SET user_name='$data[1]',
+						user_role='$data[2]'
 						WHERE id_user='$data[0]'";
 			return mysqli_query($connection,$sql);	
-		}
-		public function deleteUser($idUser){
-			
-			$c=new Connect();
-			$connection=$c->connection();
-			
-			$sql="DELETE FROM sl_users 
-					WHERE id_user='$idUser'";
-			return mysqli_query($connection,$sql);
 		}
 	}
  ?>
