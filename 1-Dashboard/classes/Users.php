@@ -5,15 +5,15 @@
 			$connection=$c->connection();
 			$date=date('Y-m-d');
 			$sql="INSERT INTO sl_users (name,
-								last_name,
-								email,
-								password,
-								date_capture)
+							last_name,
+							email,
+							password,
+							date_capture)
 						VALUES ('$data[0]',
-								'$data[1]',
-								'$data[2]',
-								'$data[3]',
-								'$date')";
+							'$data[1]',
+							'$data[2]',
+							'$data[3]',
+							'$date')";
 			return mysqli_query($connection,$sql);
 		}
 		public function loginUser($inform){
@@ -48,9 +48,9 @@
 			$c=new Connect();
 			$connection=$c->connection();
 			$sql="SELECT id_user,
-							name,
-							last_name,
-							email
+					name,
+					last_name,
+					email
 					FROM sl_users 
 					WHERE id_user='$idUser'";
 					
@@ -60,9 +60,9 @@
 			
 			$userArray=array(
 						'id_user' => $row[0],
-							'name' => $row[1],
-							'lastName' => $row[2],
-							'email' => $row[3]
+						'name' => $row[1],
+						'lastName' => $row[2],
+						'email' => $row[3]
 						);
 			return $userArray;
 		}
