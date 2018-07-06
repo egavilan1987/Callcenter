@@ -68,7 +68,7 @@
 					updated_by_user,
 					created_date,
 					updated_date
-					FROM sl_users 
+					FROM users 
 					WHERE id_user='$idUser'";
 					
 			$result=mysqli_query($connection,$sql);
