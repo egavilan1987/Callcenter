@@ -42,13 +42,16 @@
 			}
 		}
 		public function bringID($inform){
+			
 			$c=new Connect();
 			$connection=$c->connection();
+			
 			$password=sha1($inform[1]);
+			
 			$sql="SELECT id_user 
-					from sl_users 
-					where email='$inform[0]'
-					and password='$password'"; 
+					FROM users 
+					WHERE email='$inform[0]'
+					AND password='$password'"; 
 			$result=mysqli_query($connection,$sql);
 			return mysqli_fetch_row($result)[0];
 		}
