@@ -5,20 +5,11 @@ To Do:
 --Study the dashboard code
 
 -Study the the loan
--Pay CC
 -Magazine review after lunch
 
 
 
 
-In the morning
--Study English
--Study JSON 
+No. de Cuenta 1462 7150 011
 
-Tonight to do: 
-<p>Logout</p>
-In the profile options try using <p> instead of <samp>
-
-Add The Department Opction
-  Even though it is not part of the first phase of the coding plan just for test and simplicity we are going to use that. 
-
+Duglas-->849-607-1443
