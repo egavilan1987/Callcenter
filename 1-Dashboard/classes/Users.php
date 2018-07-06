@@ -1,13 +1,14 @@
 <?php 
 	class Users{
 		public function userRegister($data){
+			
 			$c=new Connect();
 			$connection=$c->connection();
 			
 			$date=date('Y-m-d');
 			$user="admin";
 			
-			$sql="INSERT INTO sl_users (user_name,
+			$sql="INSERT INTO users (user_name,
 							password,
 							user_role,
 							created_by_user,
