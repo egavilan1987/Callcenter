@@ -5,13 +5,14 @@
 		public function addDepartment($data){
 			$c=new Connect();
 			$connection=$c->connection();
-
-			$sql="INSERT INTO departments(id_user,
+			
+			$sql="INSERT INTO departments($id_user,
 							name_department,
-							created_date)
+							updated_date)
 						VALUES ('$data[0]',
 							'$data[1]',
-							'$data[2]')";
+							'$data[2]'
+							)";
 
 			return mysqli_query($connection,$sql);
 		}
@@ -20,7 +21,7 @@
 			$c=new Connect();
 			$connection=$c->connection();
 
-			$sql="UPDATE departments SET name_department='$data[1]', updated_by_user='$data[2]',updated_date='$data[3]'
+			$sql="UPDATE departments SET name_department='$data[2]',updated_date='$data[3]'
 								WHERE id_department='$data[0]'";
 			return mysqli_query($connection,$sql);
 		}
