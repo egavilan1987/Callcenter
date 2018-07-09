@@ -13,6 +13,7 @@
 		$department,
 		$currentDate
 				);
+
 	$obj= new departments();
 	echo $obj->addDepartment($data);
  ?>
